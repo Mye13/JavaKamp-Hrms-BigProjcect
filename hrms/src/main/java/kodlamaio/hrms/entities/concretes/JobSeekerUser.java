@@ -4,25 +4,23 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+@EqualsAndHashCode(callSuper=false)
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "job_seekers")
-public class JobSeekerUser {
+public class JobSeekerUser extends User{
 	
-	@Id
-	@GeneratedValue
-	@Column(name = "job_seeker_id")
-	private int jobSeekerUserId;
+//	@Column(name = "job_seeker_id")
+//	private int jobSeekerUserId;
 	
 	@Column(name = "first_name")
 	private String firstName;
